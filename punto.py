@@ -1,0 +1,90 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOGX8in2lWY4occ7hrNzl5b",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/brunojjoel/unab_pa_tp_3/blob/main/punto.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "QFXjAFqJdfxY"
+      },
+      "outputs": [],
+      "source": [
+        "class Punto:\n",
+        "\n",
+        "    def __init__(self, x, y):\n",
+        "        self.x = x\n",
+        "        self.y = y\n",
+        "\n",
+        "    def eje_x(self):\n",
+        "        return self.y == 0\n",
+        "\n",
+        "    def eje_y(self):\n",
+        "        return self.x == 0\n",
+        "\n",
+        "    def impresion(self):\n",
+        "        return f\"Punto({self.x}, {self.y})\"\n",
+        "\n",
+        "    def opuesto(self):\n",
+        "        return Punto(-self.x, -self.y)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p = Punto(1, 8)\n",
+        "\n",
+        "print(p.impresion())\n",
+        "print(\"En eje X:\", p.eje_x())\n",
+        "print(\"En eje Y:\", p.eje_y())\n",
+        "\n",
+        "p_opuesto = p.opuesto()\n",
+        "print(\"Opuesto:\", p_opuesto.impresion())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W17l9juwqVee",
+        "outputId": "ece36ced-8c65-4130-b21b-42ebbbdb60b3"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Punto(1, 8)\n",
+            "En eje X: False\n",
+            "En eje Y: False\n",
+            "Opuesto: Punto(-1, -8)\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
